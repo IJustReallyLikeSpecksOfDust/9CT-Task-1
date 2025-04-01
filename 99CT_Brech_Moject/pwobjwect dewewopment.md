@@ -76,6 +76,26 @@ When able too, the robot should transport it's object to the location it started
 ##### Expected Outcome: The robot transports it's target from it's original location to a different, specified location.
 
 
+
 ## Test Cases
 
-- "The robot is stupid"
+| Test Case | Input     | Expected Output   |
+|---------- |---------- |----------------   |
+|Must find object      |None           |Robot drives forward                 |
+|        Encounters obstacle   | Ultrasonic Sensor detects object & colour sensor identifies it as obstacle   |   Robot turns 90 degrees and continues                |
+|Encounters target   |Ultrasonic Sensor detects object & colour sensor identifies it as target           |    Robot uses attachment(s) to pick up the object and continues               |
+|Reaches drop-off point         |  Colour sensor detects large black square area         |   Robot drops objects into the point and continues/succeeds                |
+
+
+
+## Non-Functional Requirements
+
+
+- Speed
+The robot must move swiftly for ease of testing and general utility.
+
+- Precison
+The robot needs to be able to move precisely as to not accidentally bump objects or leave it's area.
+
+- Reaction Time
+The robot should react to sensor information swiftly.
