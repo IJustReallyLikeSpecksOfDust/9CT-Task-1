@@ -1,6 +1,8 @@
 # Assessment Task One
 ### By Maxi Falconer-Ware
 
+
+# Requirements Outline
 ## Purpose
 
 I must develop a program that allows an EV3 Lego Mindstorms robot to find, transport, drop, and avoid, a set of coloured blocks.
@@ -99,3 +101,29 @@ The robot needs to be able to move precisely as to not accidentally bump objects
 
 - Reaction Time
 The robot should react to sensor information swiftly.
+
+
+
+
+
+# Design
+
+
+```
+{
+BEGIN findobject #somehow accidentally managed to make this a nearly exact clone of the teacher's one 
+    WHILE distance > 100mm
+        READ distance
+        DRIVE forwards
+    ENDWHILE
+    #tba
+
+}
+```
+
+```
+{
+BEGIN sensefriendorfoe
+    W
+}
+```
