@@ -127,3 +127,7 @@ BEGIN sensefriendorfoe
     W
 }
 ```
+
+I have decided that, due to the fact they have completely stunted my progress, to return to pseudocode & flowcharts at a later date.
+
+# 
