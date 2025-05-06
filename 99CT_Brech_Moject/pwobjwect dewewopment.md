@@ -130,4 +130,18 @@ BEGIN sensefriendorfoe
 
 I have decided that, due to the fact they have completely stunted my progress, to return to pseudocode & flowcharts at a later date.
 
-# 
+# Development & Integration
+
+### Encountering Target
+
+
+##### Claw Opening Function (First Test) - Attempting to open the claw for picking up an object.
+Funtion should open the claw. To be combined with later functions to capture pieces.
+
+```
+def openClaw():
+    claw_motor.run_until_stalled(200,then=Stop.COAST, duty_limit=50)
+    ev3.speaker.beep()
+```
+#### Result: 
+Initially, the program did not work in any way. This was frustrating, but after tinkering with the lego build, it now works seemlessly. The claw opens from a closed state evenly, although I will note that the speed could be improved and the function will need to stop itself, as it currently does not. In the future, I will test different values to make this work.
