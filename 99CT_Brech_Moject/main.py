@@ -6,8 +6,6 @@ from pybricks.parameters import Port, Stop, Direction, Button, Color
 from pybricks.tools import wait, StopWatch, DataLog
 from pybricks.robotics import DriveBase
 from pybricks.media.ev3dev import SoundFile, ImageFile
-#from claw.py import closeClaw, openClaw
-from claw.py import openclaw, closeclaw
 
 
 # This program requires LEGO EV3 MicroPython v2.0 or higher.
@@ -36,7 +34,7 @@ def followLine(): #code for making the robot follow the line
         wait(10)
     ev3.speaker.beep()
 
-def turn():
+def turn(): #code for making the robot turn and then move
     ev3.speaker.beep()
     robot.turn(90)
     ev3.speaker.beep()
@@ -45,24 +43,49 @@ def turn():
     robot.turn(90)
     ev3.speaker.beep()
 
-def openClaw():
+def openClaw(): #code for opening the claw.
     claw_motor.run_until_stalled(200,then=Stop.COAST, duty_limit=50)
     ev3.speaker.beep()
     claw_motor.reset_angle(0)
     claw_motor.run_target(200, -90)
     
-def closeClaw():
+def closeClaw():  #code for closing the claw, ideally trapping a block inside.
     claw_motor.run_until_stalled(-200,then=Stop.COAST, duty_limit=50)
     ev3.speaker.beep()
+
+def errorTest():
+if 
 
 # Write your program here.
 ev3.speaker.beep()
 ev3.speaker.beep()
 
-#alliswell = True #this determines the mode that the program takes. either planned course or trial and
+allisSwell = 1 #this determines the mode that the program takes. either planned course or trial and
+funnyvariablename =
 
-openClaw()
+#actual process
+ 
+closeClaw() #set it to a default at the beginning of the code
+if allisSwell == 1:
 
-wait(1000)
+    followLine() #make this go to red
+    robot.turn(90)
+    openClaw()
+    robot.straight(150) #value can be changed as needed
+    closeClaw()
+    robot.turn(90)
+    followLine() #make this one go to start
+    robot.turn(90)
+    openClaw() #deposit)
+    robot.turn(90)  
+    followLine() #to the yellow
+    robot.turn(30)
+    closeClaw()
+    robot.turn(150)
+    followLine() #make this one go to start
+    robot.turn(90)
+    openClaw() #deposit)
+    #in theory this will work
 
-closeClaw()
+while allisSwell == 2:
+    
