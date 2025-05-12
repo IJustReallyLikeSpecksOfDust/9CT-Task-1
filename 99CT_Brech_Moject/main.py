@@ -7,6 +7,7 @@ from pybricks.tools import wait, StopWatch, DataLog
 from pybricks.robotics import DriveBase
 from pybricks.media.ev3dev import SoundFile, ImageFile
 #from claw.py import closeClaw, openClaw
+from claw.py import openclaw, closeclaw
 
 
 # This program requires LEGO EV3 MicroPython v2.0 or higher.
