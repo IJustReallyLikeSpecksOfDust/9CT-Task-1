@@ -34,6 +34,7 @@ def closeClaw():
     ev3.speaker.beep()
 
 def openClaw():  
+    '''A relatively simple, but crucial function that will likely require innovation.'''
     claw_motor.run_until_stalled(200,then=Stop.COAST, duty_limit=10)
     ev3.speaker.beep()
 
@@ -63,7 +64,10 @@ openClaw() #deposit)
 if obstacle_sensor.distance() > 100:
     allisSwell = 2
 
-while allisSwell == 2: #a failsafe
+while allisSwell == 2: 
+    """this loop acts as a failsafe, and should repeat until success occurs. It, quite simply, detects the distance of objects.
+    If far, it will drive forwards, randomly decide if to turn or not, and continue.
+    """
     while obstacle_sensor.distance() > 130:
         rng = random.randint(1,4)
         robot.drive(100)
@@ -72,5 +76,10 @@ while allisSwell == 2: #a failsafe
         elif rng == 4:
             robot.turn(-90)
         ev3.speaker.beep()
+    openClaw()
+    robot.drive(50)
+    closeClaw()
+    robot.drive(-50)
+    robot.turn(90)
 
     

@@ -6,7 +6,7 @@
 ## Purpose
 
 I must develop a program that allows an EV3 Lego Mindstorms robot to find, transport, drop, and avoid, a set of coloured blocks.
-The robot is required to us at least 2 different sensors, with all other attachments being removable after each lesson.
+The robot is required to use at least 2 different sensors, with all other attachments being removable after each lesson.
 
 ## Key Actions
 
@@ -23,7 +23,7 @@ When the ultrasonic sensor detects an object in front of it, the robot should us
 
 Upon detecting an object it needs to acquire, the robot should pick it up or otherwise control it's location.
 
-When able too, the robot should transport it's object to the location it started in, by carrying/pushing/etc-ing it.
+When able too, the robot should transport it's object to the location it started in, by carrying/pushing/otherwise moving it.
 
 
 ## Use Cases
@@ -130,18 +130,21 @@ BEGIN sensefriendorfoe
 
 I have decided that, due to the fact they have completely stunted my progress, to return to pseudocode & flowcharts at a later date.
 
+
+
+
+
 # Development & Integration
 
-### Encountering Target
-
-
-##### Claw Opening Function (First Test) - Attempting to open the claw for picking up an object.
-Funtion should open the claw. To be combined with later functions to capture pieces.
+#### Initial testing of claw function(s). Used for acquiring objects upon target encounter.
 
 ```
-def openClaw():
+def openClaw(): 
     claw_motor.run_until_stalled(200,then=Stop.COAST, duty_limit=50)
     ev3.speaker.beep()
 ```
-#### Result: 
-Initially, the program did not work in any way. This was frustrating, but after tinkering with the lego build, it now works seemlessly. The claw opens from a closed state evenly, although I will note that the speed could be improved and the function will need to stop itself, as it currently does not. In the future, I will test different values to make this work.
+
+
+
+
+# Test Cases
